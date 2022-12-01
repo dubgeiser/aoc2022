@@ -2,21 +2,24 @@
 
 
 def read_data_file(fn):
-    max = 0
+    totals = []
     current_total = 0
     with open(fn) as data:
         for line in data:
             if line.strip() == '':
-                if current_total > max:
-                    max = current_total
+                totals.append(current_total)
                 current_total = 0
                 continue
             current_total += int(line.strip())
-    return max
+    # Don't forget the last one!
+    totals.append(current_total)
+    return totals
 
 
 def solve(data):
-    return data
+    data.sort()
+    print(f"{data = }")
+    return data[-3] + data[-2] + data[-1]
 
 
 if __name__ == "__main__":
