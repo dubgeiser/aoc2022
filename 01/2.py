@@ -18,7 +18,6 @@ def read_data_file(fn):
 
 def solve(data):
     data.sort()
-    print(f"{data = }")
     return data[-3] + data[-2] + data[-1]
 
 
