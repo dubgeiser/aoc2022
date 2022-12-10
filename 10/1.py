@@ -13,12 +13,9 @@ answer = 0
 
 for instruction in program:
     cycle += 1
-    if instruction == "noop":
-        if is_important(cycle):
-            answer += cycle * x
-    else:
-        if is_important(cycle):
-            answer += cycle * x
+    if is_important(cycle):
+        answer += cycle * x
+    if instruction.startswith("addx "):
         cycle += 1
         if is_important(cycle):
             answer += cycle * x
