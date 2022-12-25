@@ -23,3 +23,9 @@ if type(left) == list and type(right) == list:
 ```
 did not work and resulted in too many counts (sample worked)
 Needed to exhaust the lists and compare them first!
+
+
+## Day 15
+This is the day that kinda got me; part 1 took a couple of hours, then I let go of AoC for a couple of days, 'cause my heart and head weren't in it.
+Revisiting part 1 and catching the inefficient way of determining the positions that cannot contain a beacon and that we're dealing with intervals here, gave me back my motivation to optimize it so that I could finally finish part 2.
+Still part 2 is very inefficient and when timing and motivation permits I should revisit it, there's got to be a much more efficient way to determine the position of the distress signal.
